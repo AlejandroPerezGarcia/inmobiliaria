@@ -35,9 +35,6 @@ const propiedades_venta = [
     smoke: false,
     pets: true,
   },
-];
-
-const propiedades_alquiler = [
   {
     nombre: "Apartamento en el centro de la ciudad",
     src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60",
@@ -77,7 +74,6 @@ const propiedades_alquiler = [
 ];
 
 const ventas = document.querySelector("#venta");
-const alquiler = document.querySelector("#alquiler");
 
 for (let venta2 of propiedades_venta) {
   if (venta2.smoke == true) {
@@ -91,7 +87,7 @@ for (let venta2 of propiedades_venta) {
   } else {
     venta2.pets = `<p class="text-danger"><i class="fa-solid fa-ban"></i> No se permiten mascotas</p>`;
   }
-ventas.innerHTML += `
+  ventas.innerHTML += `
   <div class="col-md-4 mb-4" >
       <div class="card" >
           <img src="${venta2.src}"
@@ -108,39 +104,5 @@ ventas.innerHTML += `
                   <p>${venta2.pets}</p>
               </div>
       </div>
-  </div>`;
-}
-
-for (let alquiler2 of propiedades_alquiler) {
-  if (alquiler2.smoke == true) {
-    alquiler2.smoke = `<p class="text-success"><i class="fas fa-smoking"></i> Permitido fumar </p>`;
-  } else {
-    alquiler2.smoke = `<p class="text-danger"><i class="fas fa-smoking-ban"></i> No se permite fumar</p>`;
-  }
-
-  if (alquiler2.pets == true) {
-    alquiler2.pets = `<p class="text-success"><i class="fas fa-paw"></i> Mascotas permitidas</p>`;
-  } else {
-    alquiler2.pets = `<p class="text-danger"><i class="fa-solid fa-ban"></i> No se permiten mascotas</p>`;
-  }
-
-alquiler.innerHTML += `
-  <div class="col-md-4 mb-4" >
-      <div class="card" >
-          <img src="${alquiler2.src}"
-              class="card-img-top"
-              alt="Imagen del departamento"/>
-                  <div class="card-body">
-                      <h5 class="card-title">${alquiler2.nombre}</h5>
-                      <p class="card-text">${alquiler2.descripcion}</p>
-                      <p><i class="fas fa-map-marker-alt"> ${alquiler2.ubicacion} </i></p>
-                      <p><i class="fas fa-bed"></i> ${alquiler2.habitaciones} Habitaciones |
-                      <i class="fas fa-bath"></i> ${alquiler2.bano} Baños
-                      </p>
-                      <p><i class="fas fa-dollar-sign"></i> ${alquiler2.costo}</p>
-                      <p>${alquiler2.smoke}</p>
-                      <p>${alquiler2.pets}</p>
-                  </div>
-          </div>
   </div>`;
 }

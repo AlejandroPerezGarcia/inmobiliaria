@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Propiedades en Venta</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css" />
     <!-- Bootstrap CDN -->
@@ -14,12 +14,12 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-</head>
-<body>
-      <!-- nav inicio -->
+  </head>
+  <body>
+    <!-- nav inicio -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand" href="#">Inmobiliaria ADL</a>
+        <a class="navbar-brand" href="./index.html">Inmobiliaria ADL</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,19 +37,29 @@
               <a class="nav-link" href="./index.html">Pagína Principal</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./propiedades_alquiler.html">Alquiler</a>
+              <a class="nav-link" href="./propiedades_alquiler.html"
+                >Alquiler</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- nav fin -->
+
     <!-- main inicio -->
     <main class="container-fluid main-section">
       <h1 class="text-white">Encuentra tu nueva propiedad</h1>
     </main>
     <!-- main final -->
+    <div class="container mt-5">
+      <section>
+        <h2>Propiedades en venta</h2>
+        <div class="row" id="venta"></div>
+      </section>
+    </div>
 
+    <script src="./assets/js/venta.js"></script>
     <!-- Font awesome -->
     <script
       src="https://kit.fontawesome.com/f5bdbb41e0.js"
@@ -61,5 +71,5 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-</body>
+  </body>
 </html>
